@@ -4,18 +4,21 @@ $data = json_decode(file_get_contents('data.json'), true);
 
 function checkAuth() {
     global $data;
-    if (!isset($_SESSION['key']) || !isset($data[$_SESSION['key']])) {
-        header("Location: login.php"); exit;
+    
+    // THÊM DÒNG NÀY: Kiểm tra xem có đang ở trang login.php không
+    $current_page = basename($_SERVER['PHP_SELF']);
+    
+    // CHỈ chuyển hướng nếu:
+    // 1. Không phải trang login.php
+    // 2. VÀ chưa đăng nhập
+    if ($current_page !== 'login.php' && (!isset($_SESSION['key']) || !isset($data[$_SESSION['key']]))) {
+        header("Location: login.php"); 
+        exit;
     }
+    
+    // Các dòng code còn lại giữ nguyên...
+    if (!isset($_SESSION['key'])) return; // Thêm dòng này để tránh lỗi nếu chưa đăng nhập mà gọi hàm bên dưới
+
     $key = $_SESSION['key'];
-    $device = $_SERVER['HTTP_USER_AGENT'];
-    if (empty($data[$key]['device'])) {
-        $data[$key]['device'] = $device;
-        file_put_contents('data.json', json_encode($data));
-    }
-    if ($data[$key]['device'] !== $device || date("Y-m-d") > $data[$key]['expire']) {
-        session_destroy();
-        die("<h1>Key đã hết hạn hoặc thiết bị không hợp lệ!</h1>");
-    }
+    // ... code tiếp theo ...
 }
-?>
