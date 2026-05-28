@@ -1,0 +1,14 @@
+{
+  "KHANGHUYNH-A3F29C1B": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-B8D12E5F": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-C9E34A7D": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-D4F67B2E": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-E1A89C3F": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-F7B23D9A": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-A5C41E8B": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-B2D67F4A": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-C8A59B2E": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-D3F12C6A": {"type": "vip", "expire": "2026-06-27", "device": ""},
+  "KHANGHUYNH-FREE-999": {"type": "free", "expire": "2026-05-30", "device": ""},
+  "KHANGHUYNH-ADMIN-000": {"type": "admin", "expire": "9999-12-31", "device": ""}
+}
