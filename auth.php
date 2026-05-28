@@ -1,8 +1,7 @@
 <?php
 session_start();
 $data = json_decode(file_get_contents('data.json'), true);
-// Tạm thời chèn dòng này để kiểm tra
-if ($data === null) {
+
 function checkAuth() {
     global $data;
     
