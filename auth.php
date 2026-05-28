@@ -3,13 +3,6 @@ session_start();
 $data = json_decode(file_get_contents('data.json'), true);
 // Tạm thời chèn dòng này để kiểm tra
 if ($data === null) {
-    die("Dữ liệu JSON bị lỗi hoặc không tìm thấy file! Nội dung file thô: " . file_get_contents('data.json'));
-}
-// Kiểm tra xem Key bạn nhập có nằm trong danh sách không
-$inputKey = $_SESSION['key'] ?? 'Chưa có key';
-if (!isset($data[$inputKey])) {
-    die("Key bạn nhập: " . $inputKey . " không tồn tại trong data.json!");
-}
 function checkAuth() {
     global $data;
     
